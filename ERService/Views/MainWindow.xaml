@@ -1,0 +1,137 @@
+<syncfusion:ChromelessWindow
+    x:Class="ERService.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:prism="http://prismlibrary.com/"
+    xmlns:skin="clr-namespace:Syncfusion.SfSkinManager;assembly=Syncfusion.SfSkinManager.WPF"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+    Title="ERService"
+    skin:SfSkinManager.VisualStyle="FluentLight"
+    Icon="App.ico">
+
+    <Window.Resources>
+        <Style x:Key="ItemStyle" TargetType="syncfusion:NavigationItem">
+            <Setter Property="IconTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Image
+                            Width="16"
+                            Height="16"
+                            Source="{Binding}" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="IconMemberPath" Value="Icon" />
+            <Setter Property="DisplayMemberPath" Value="Name" />
+            <Setter Property="Command" Value="{Binding Path=Command}" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <DockPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="0"
+                Background="LightGray"
+                LastChildFill="True">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+
+                <StackPanel Margin="15,5,0,0">
+                    <StackPanel Width="135" Orientation="Horizontal">
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            FontFamily="Consolas"
+                            FontSize="16"
+                            FontWeight="ExtraBold"
+                            Foreground="Black"
+                            Text="ERService" />
+                    </StackPanel>
+                    <TextBlock
+                        HorizontalAlignment="Right"
+                        FontFamily="OCRA"
+                        FontSize="12"
+                        FontWeight="ExtraBold"
+                        Foreground="LightGray"
+                        Opacity="0.3"
+                        Text=""
+                        UseLayoutRounding="True" />
+                </StackPanel>
+
+                <ContentControl
+                    Grid.Column="1"
+                    prism:RegionManager.RegionName="HeaderRegion"
+                    DockPanel.Dock="Right" />
+            </DockPanel>
+
+            <DockPanel
+                Grid.Row="1"
+                Grid.Column="1"
+                LastChildFill="True">
+                <ContentControl prism:RegionManager.RegionName="DetailHeaderRegion" />
+            </DockPanel>
+
+            <DockPanel
+                Grid.Row="1"
+                Grid.RowSpan="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="0"
+                Background="Transparent"
+                LastChildFill="True">
+                <Border BorderBrush="LightGray" BorderThickness="0,0,1,0">
+                    <syncfusion:SfNavigationDrawer
+                        x:Name="navigationDrawer"
+                        prism:RegionManager.RegionName="ContentRegion"
+                        DisplayMemberPath="Name"
+                        DisplayMode="Expanded"
+                        IconMemberPath="Icon"
+                        ItemContainerStyle="{StaticResource ItemStyle}"
+                        ItemsSource="{Binding MenuItems}" />
+                </Border>
+            </DockPanel>
+
+            <DockPanel
+                Grid.Row="3"
+                Grid.Column="1"
+                LastChildFill="True"
+                Visibility="Collapsed">
+                <DockPanel.Effect>
+                    <DropShadowEffect ShadowDepth="1" />
+                </DockPanel.Effect>
+                <ContentControl prism:RegionManager.RegionName="StatusBarRegion" DockPanel.Dock="Left" />
+            </DockPanel>
+
+            <!--<DockPanel
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="5,0,0,10"
+            LastChildFill="True">
+                <ContentControl prism:RegionManager.RegionName="ContentRegion" DockPanel.Dock="Left" />
+            </DockPanel>-->
+
+        </Grid>
+
+    </Grid>
+</syncfusion:ChromelessWindow>

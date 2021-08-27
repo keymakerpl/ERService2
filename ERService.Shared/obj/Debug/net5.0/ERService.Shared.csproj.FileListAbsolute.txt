@@ -1,0 +1,15 @@
+C:\_projekty\ERService2\ERService\ERService.Shared\bin\Debug\net5.0\ERService.Shared.deps.json
+C:\_projekty\ERService2\ERService\ERService.Shared\bin\Debug\net5.0\ERService.Shared.dll
+C:\_projekty\ERService2\ERService\ERService.Shared\bin\Debug\net5.0\ref\ERService.Shared.dll
+C:\_projekty\ERService2\ERService\ERService.Shared\bin\Debug\net5.0\ERService.Shared.pdb
+C:\_projekty\ERService2\ERService\ERService.Shared\bin\Debug\net5.0\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService\ERService.Shared\bin\Debug\net5.0\ERService.Contracts.pdb
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.csproj.AssemblyReference.cache
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.AssemblyInfo.cs
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.csproj.CopyComplete
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.dll
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ref\ERService.Shared.dll
+C:\_projekty\ERService2\ERService\ERService.Shared\obj\Debug\net5.0\ERService.Shared.pdb

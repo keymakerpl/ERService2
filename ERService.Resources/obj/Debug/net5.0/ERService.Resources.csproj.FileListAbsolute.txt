@@ -1,0 +1,17 @@
+C:\_projekty\ERService2\ERService\ERService.Resources\bin\Debug\net5.0\Lokalization\Customer.pl.resx
+C:\_projekty\ERService2\ERService\ERService.Resources\bin\Debug\net5.0\ERService.Resources.deps.json
+C:\_projekty\ERService2\ERService\ERService.Resources\bin\Debug\net5.0\ERService.Resources.dll
+C:\_projekty\ERService2\ERService\ERService.Resources\bin\Debug\net5.0\ref\ERService.Resources.dll
+C:\_projekty\ERService2\ERService\ERService.Resources\bin\Debug\net5.0\ERService.Resources.pdb
+C:\_projekty\ERService2\ERService\ERService.Resources\bin\Debug\net5.0\pl\ERService.Resources.resources.dll
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.csproj.AssemblyReference.cache
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.Lokalization.Customer.pl.resources
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.csproj.GenerateResource.cache
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.AssemblyInfo.cs
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\pl\ERService.Resources.resources.dll
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.dll
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ref\ERService.Resources.dll
+C:\_projekty\ERService2\ERService\ERService.Resources\obj\Debug\net5.0\ERService.Resources.pdb

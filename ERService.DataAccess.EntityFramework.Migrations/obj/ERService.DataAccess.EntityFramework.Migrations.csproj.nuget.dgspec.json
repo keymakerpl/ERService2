@@ -1,0 +1,444 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Migrations\\ERService.DataAccess.EntityFramework.Migrations.csproj": {}
+  },
+  "projects": {
+    "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj",
+        "projectName": "ERService.Contracts",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "System.ObjectModel": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj",
+        "projectName": "ERService.DataAccess.EntityFramework.Abstractions",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj",
+        "projectName": "ERService.DataAccess.EntityFramework.Entities",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Migrations\\ERService.DataAccess.EntityFramework.Migrations.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Migrations\\ERService.DataAccess.EntityFramework.Migrations.csproj",
+        "projectName": "ERService.DataAccess.EntityFramework.Migrations",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Migrations\\ERService.DataAccess.EntityFramework.Migrations.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Migrations\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.MsSql\\ERService.DataAccess.EntityFramework.SqlServer.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.MsSql\\ERService.DataAccess.EntityFramework.SqlServer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.MsSql\\ERService.DataAccess.EntityFramework.SqlServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.MsSql\\ERService.DataAccess.EntityFramework.SqlServer.csproj",
+        "projectName": "ERService.DataAccess.EntityFramework.SqlServer",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.MsSql\\ERService.DataAccess.EntityFramework.SqlServer.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.MsSql\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.90, )"
+            },
+            "LinqKit.Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.26, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj",
+        "projectName": "ERService.FunctionalCSharp",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

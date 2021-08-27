@@ -1,0 +1,12 @@
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\bin\Debug\net5.0\ERService.FunctionalCSharp.deps.json
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\bin\Debug\net5.0\ERService.FunctionalCSharp.dll
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\bin\Debug\net5.0\ref\ERService.FunctionalCSharp.dll
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\bin\Debug\net5.0\ERService.FunctionalCSharp.pdb
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ERService.FunctionalCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ERService.FunctionalCSharp.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ERService.FunctionalCSharp.AssemblyInfo.cs
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ERService.FunctionalCSharp.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ERService.FunctionalCSharp.dll
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ref\ERService.FunctionalCSharp.dll
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ERService.FunctionalCSharp.pdb
+C:\_projekty\ERService2\ERService\ERService.FunctionalCSharp\obj\Debug\net5.0\ERService.FunctionalCSharp.csproj.AssemblyReference.cache

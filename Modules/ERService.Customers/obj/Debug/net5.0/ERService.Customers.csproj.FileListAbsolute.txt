@@ -1,0 +1,15 @@
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\bin\Debug\net5.0\ERService.Customers.deps.json
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\bin\Debug\net5.0\ERService.Customers.dll
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\bin\Debug\net5.0\ref\ERService.Customers.dll
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\bin\Debug\net5.0\ERService.Customers.pdb
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\bin\Debug\net5.0\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\bin\Debug\net5.0\ERService.Contracts.pdb
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.csproj.AssemblyReference.cache
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.AssemblyInfo.cs
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.csproj.CopyComplete
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.dll
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ref\ERService.Customers.dll
+C:\_projekty\ERService2\ERService\Modules\ERService.Customers\obj\Debug\net5.0\ERService.Customers.pdb

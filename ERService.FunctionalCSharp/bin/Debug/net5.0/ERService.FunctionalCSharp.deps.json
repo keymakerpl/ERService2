@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ERService.FunctionalCSharp/1.0.0": {
+        "runtime": {
+          "ERService.FunctionalCSharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ERService.FunctionalCSharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

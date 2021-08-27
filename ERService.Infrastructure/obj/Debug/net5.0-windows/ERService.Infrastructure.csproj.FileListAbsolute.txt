@@ -1,0 +1,6 @@
+C:\_projekty\ERService\ERService.Infrastructure\obj\Debug\net5.0-windows\ERService.Infrastructure.csprojAssemblyReference.cache
+C:\_projekty\ERService\ERService.Infrastructure\obj\Debug\net5.0-windows\ERService.Infrastructure.Properties.Resources.resources
+C:\_projekty\ERService\ERService.Infrastructure\obj\Debug\net5.0-windows\ERService.Infrastructure.csproj.GenerateResource.cache
+C:\_projekty\ERService\ERService.Infrastructure\obj\Debug\net5.0-windows\ERService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService\ERService.Infrastructure\obj\Debug\net5.0-windows\ERService.Infrastructure.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService\ERService.Infrastructure\obj\Debug\net5.0-windows\ERService.Infrastructure.csproj.AssemblyReference.cache

@@ -1,0 +1,17 @@
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ERService.Mvvm.deps.json
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ERService.Mvvm.dll
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ref\ERService.Mvvm.dll
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ERService.Mvvm.pdb
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ERService.Contracts.pdb
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.csproj.AssemblyReference.cache
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.AssemblyInfo.cs
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.csproj.CopyComplete
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.dll
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ref\ERService.Mvvm.dll
+C:\_projekty\ERService2\ERService\ERService.Mvvm\obj\Debug\net5.0\ERService.Mvvm.pdb
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ERService.DataAccess.EntityFramework.Entities.dll
+C:\_projekty\ERService2\ERService\ERService.Mvvm\bin\Debug\net5.0\ERService.DataAccess.EntityFramework.Entities.pdb

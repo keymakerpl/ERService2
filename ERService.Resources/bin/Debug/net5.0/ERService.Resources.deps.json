@@ -1,0 +1,28 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ERService.Resources/1.0.0": {
+        "runtime": {
+          "ERService.Resources.dll": {}
+        },
+        "resources": {
+          "pl/ERService.Resources.resources.dll": {
+            "locale": "pl"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ERService.Resources/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
