@@ -7,6 +7,7 @@ using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
 using Syncfusion.Windows.Shared;
+using System.Windows;
 
 namespace ERService.Customers
 {
@@ -14,22 +15,27 @@ namespace ERService.Customers
     {
         private readonly IEventAggregator eventAggregator;
         private readonly IRegionManager regionManager;
+        private readonly ResourceDictionary resourceDictionary;
 
-        public CustomersModule(IEventAggregator eventAggregator, IRegionManager regionManager)
+        public CustomersModule(IEventAggregator eventAggregator,
+                               IRegionManager regionManager,
+                               ResourceDictionary resourceDictionary)
         {
             this.eventAggregator = eventAggregator;
             this.regionManager = regionManager;
+            this.resourceDictionary = resourceDictionary;
         }
 
-        public void OnInitialized(IContainerProvider containerProvider)
-        {
-            eventAggregator.GetEvent<RegisterSideMenuItemEvent>().Publish(new MenuItem
-            {
-                Name = "Klienci",
-                Command = new DelegateCommand<object>(args =>
-                regionManager.Regions[RegionNames.ContentRegion].RequestNavigate(ViewNames.CustomerListView))
-            });
-        }
+        public void OnInitialized(IContainerProvider containerProvider) => 
+            eventAggregator.GetEvent<RegisterMainMenuItemEvent>()
+                           .Publish(new MainMenuItem
+                           {
+                               Text = "Klienci",
+                               Icon = resourceDictionary["Customers"],
+                               Command = new DelegateCommand<object>(args => 
+                               regionManager.Regions[RegionNames.DetailRegion]
+                                            .RequestNavigate(ViewNames.CustomerListView))
+                           });
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {

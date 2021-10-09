@@ -4,9 +4,9 @@ using ERService.DataAccess.EntityFramework.Abstractions;
 using ERService.FunctionalCSharp;
 using LinqKit;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -33,7 +33,7 @@ namespace ERService.DataAccess.EntityFramework.SqlServer
             Disposable.Of(() => contextFactory.CreateContext<TContext>())
                       .Use(context => context.Set<TEntity>().Find(id));
 
-        public virtual async Task<TEntity> GetByIdAsync(TKey id) =>
+        public virtual async Task<Maybe<TEntity>> GetByIdAsync(TKey id) =>
             await Disposable.Of(() => contextFactory.CreateContext<TContext>())
                             .Use(async context => await context.Set<TEntity>().FindAsync(id));
 
@@ -79,78 +79,94 @@ namespace ERService.DataAccess.EntityFramework.SqlServer
 
         public virtual async Task<bool> SaveAsync() => 
             await Disposable.Of(() => contextFactory.CreateContext<TContext>())
-                            .Use(async context =>
-                            {
-                                var addedEntities = context.ChangeTracker.Entries()
+                            .Use(async context => await SaveAsyncInternal(context));
+
+        private async Task<bool> SaveAsyncInternal(TContext context)
+        {
+            var addedEntities = context.ChangeTracker.Entries()
                                                      .Where(x => x.State == EntityState.Added)
                                                      .Select(x => x.Entity)
                                                      .ToList();
 
-                                foreach (var entry in addedEntities)
-                                {
-                                    var added = entry as IAuditableEntity;
-                                    if (added != null && added.CreatedOn == DateTime.MinValue)
-                                        added.CreatedOn = DateTime.Now;
-                                }
+            foreach (var entry in addedEntities)
+            {
+                var added = entry as IAuditableEntity;
+                if (added != null && added.CreatedOn == DateTime.MinValue)
+                    added.CreatedOn = DateTime.Now;
+            }
 
-                                var modifiedEntities = context.ChangeTracker.Entries()
-                                                                            .Where(x => x.State == EntityState.Modified)
-                                                                            .Select(x => x.Entity)
-                                                                            .ToList();
+            var modifiedEntities = context.ChangeTracker.Entries()
+                                                        .Where(x => x.State == EntityState.Modified)
+                                                        .Select(x => x.Entity)
+                                                        .ToList();
 
-                                foreach (var entry in modifiedEntities)
-                                {
-                                    var modified = entry as IAuditableEntity;
-                                    if (modified != null)
-                                        modified.LastModifiedOn = DateTime.Now;
+            foreach (var entry in modifiedEntities)
+            {
+                var modified = entry as IAuditableEntity;
+                if (modified != null)
+                    modified.LastModifiedOn = DateTime.Now;
 
-                                    var versioned = entry as IVersionedEntity;
-                                    if (versioned != null)
-                                        versioned.RowVersion++;
-                                }
+                var versioned = entry as IVersionedEntity;
+                if (versioned != null)
+                    versioned.RowVersion++;
+            }
 
-                                var savedElements = await context.SaveChangesAsync();
-                                return savedElements > 0;
-                            });
+            var deletedEntities = context.ChangeTracker.Entries()
+                                                       .Where(x => x.State == EntityState.Deleted)
+                                                       .Select(x => x.Entity)
+                                                       .ToList();
+
+            foreach (var entry in deletedEntities)
+            {
+                var deleted = entry as ISoftDeletable;
+                if (deleted != null)
+                {
+                    context.Entry(deleted).State = EntityState.Modified;
+                    deleted.IsDeleted = true;
+                }
+            }
+
+            var savedElements = await context.SaveChangesAsync();
+            return savedElements > 0;
+        }
 
         public virtual bool HasChanges() => Disposable.Of(() => contextFactory.CreateContext<TContext>())
                                                       .Use(context => context.ChangeTracker.HasChanges());
 
-        public virtual void Add(TEntity model) => Disposable.Of(() => contextFactory.CreateContext<TContext>())
-                                                            .Use(context => context.Set<TEntity>().Add(model));
+        public virtual async Task<bool> Add(TEntity model) => 
+            await Disposable.Of(() => contextFactory.CreateContext<TContext>())
+                            .Use(async context => 
+                            { 
+                                context.Set<TEntity>().Add(model); 
+                                return await SaveAsyncInternal(context); 
+                            });
 
-        public virtual async Task Update(TEntity model) => await Disposable.Of(() => contextFactory.CreateContext<TContext>())
-                                                                           .Use(async context =>
-                                                                           {
-                                                                               context.Set<TEntity>().Update(model);
-                                                                               return await context.SaveChangesAsync();
-                                                                           });
+        public virtual async Task<bool> Update(TEntity model) => 
+            await Disposable.Of(() => contextFactory.CreateContext<TContext>())
+                            .Use(async context => 
+                            { 
+                                context.Set<TEntity>().Update(model); 
+                                return await SaveAsyncInternal(context); 
+                            });
 
-        public virtual void Remove(TEntity model) => Disposable.Of(() => contextFactory.CreateContext<TContext>())
-                                                               .Use(context => context.Set<TEntity>().Remove(model));
+        public virtual async Task<bool> Remove(TEntity model) => 
+            await Disposable.Of(() => contextFactory.CreateContext<TContext>())
+                            .Use(async context => 
+                            { 
+                                context.Set<TEntity>().Remove(model); 
+                                return await SaveAsyncInternal(context); 
+                            });
 
-        public virtual void RollBackChanges() {
-            //var changedEntries = Context.ChangeTracker
-            //                        .Entries()
-            //                        .Where(e => e.State != EntityState.Unchanged).ToList();
-
-            //foreach (var entry in changedEntries) {
-            //    switch (entry.State) {
-            //        case EntityState.Added:
-            //            entry.State = EntityState.Detached;
-            //            break;
-
-            //        case EntityState.Deleted:
-            //            entry.State = EntityState.Unchanged;
-            //            break;
-
-            //        case EntityState.Modified:
-            //            entry.CurrentValues.SetValues(entry.OriginalValues);
-            //            entry.State = EntityState.Unchanged;
-            //            break;
-            //    }
-            //}
-        }
+        public virtual async Task<Result> RemoveById(TKey key) => 
+            await Disposable.Of(() => contextFactory.CreateContext<TContext>())
+                            .Use(async context =>
+                            {
+                                return await Maybe.From(await context.FindAsync<TEntity>(key)
+                                                                     .ConfigureAwait(false))
+                                     .ToResult("Entity not found!")
+                                     .Bind(entity => Result.Try(async () => await Remove(entity).ConfigureAwait(false)))
+                                     .OnFailure(error => Debug.WriteLine(error));
+                            });
 
         public virtual void ReloadEntity(TEntity entity) =>
             Disposable.Of(() => contextFactory.CreateContext<TContext>())

@@ -3,6 +3,7 @@
     public static class ViewNames
     {
         public const string HeaderView = "HeaderView";
+        public const string DetailMenuView = "DetailMenuView";
         public const string NavigationView = "NavigationView";
         public const string LoginView = "LoginView";
         public const string StatisticsTabView = "StatisticsTabView";

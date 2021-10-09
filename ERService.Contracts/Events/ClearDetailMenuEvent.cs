@@ -3,7 +3,9 @@ using Prism.Events;
 
 namespace ERService.Contracts.Events
 {
-    public class RegisterSideMenuItemEvent : PubSubEvent<MenuItem>
+
+    public class ClearDetailMenuEvent : PubSubEvent
     {
+
     }
 }

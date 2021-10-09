@@ -12,16 +12,6 @@
                 <ResourceDictionary Source="/Syncfusion.Themes.FluentLight.WPF;component/Common/Brushes.xaml" />
                 <ResourceDictionary Source="/Syncfusion.Themes.FluentLight.WPF;component/MSControl/TextBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <Style TargetType="syncfusion:SfTextInputLayout">
-                <Setter Property="Margin" Value="5,5,5,0" />
-            </Style>
-            <Style TargetType="syncfusion:SfTextBoxExt">
-                <Setter Property="MinWidth" Value="150" />
-                <Setter Property="MaxWidth" Value="150" />
-            </Style>
-            <Style TargetType="GroupBox">
-                <Setter Property="Margin" Value="5" />
-            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </prism:PrismApplication>

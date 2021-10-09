@@ -7,7 +7,7 @@ using System;
 
 namespace ERService.MappingProvider
 {
-    internal class EntityToLookupItemMapResolver : MapResolver<ILookupItem, IEntity>
+    internal class EntityToLookupItemMapResolver : GenericMapResolver<ILookupItem, IEntity>
     {
         public EntityToLookupItemMapResolver(IAssemblyManager assemblyManager) : base(assemblyManager)
         {

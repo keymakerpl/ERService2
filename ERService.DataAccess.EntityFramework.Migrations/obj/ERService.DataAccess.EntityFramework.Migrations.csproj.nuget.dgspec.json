@@ -102,6 +102,9 @@
             "projectReferences": {
               "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj"
               }
             }
           }

@@ -2,18 +2,49 @@
     x:Class="ERService.Customers.Views.CustomersList"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:ERService.Wpf.Converters;assembly=ERService.Wpf"
     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
     xmlns:prism="http://prismlibrary.com/"
     xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
     prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <Style x:Key="customCellStyle" TargetType="syncfusion:GridCell">
+            <Setter Property="CellSelectionBrush" Value="Transparent" />
+        </Style>
+        <Style
+            x:Key="filterControlStyle"
+            BasedOn="{StaticResource {x:Type syncfusion:GridFilterControl}}"
+            TargetType="syncfusion:GridFilterControl">
+            <Setter Property="FilterMode" Value="AdvancedFilter" />
+        </Style>
+        <converters:GridFilterEventArgsConverter x:Key="gridFilterEventArgsConverter" />
+        <converters:MouseButtonEventArgsForOpenItemConverter x:Key="mouseButtonEventArgsForOpenItemConverter" />
+    </UserControl.Resources>
+
     <Grid>
         <syncfusion:SfDataGrid
             x:Name="dataGrid"
             AllowFiltering="True"
-            ItemsSource="{Binding Customers}">
+            CellStyle="{StaticResource customCellStyle}"
+            FilterPopupStyle="{StaticResource filterControlStyle}"
+            ItemsSource="{Binding Items}"
+            NavigationMode="Row"
+            SelectedItem="{Binding SelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            SelectionMode="Single">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
-                    <i:InvokeCommandAction Command="{Binding Path=DataGridMouseDoubleClick}" PassEventArgsToCommand="True" />
+                    <i:InvokeCommandAction
+                        Command="{Binding ItemMouseDoubleClickCommand}"
+                        EventArgsConverter="{StaticResource mouseButtonEventArgsForOpenItemConverter}"
+                        PassEventArgsToCommand="True" />
+                </i:EventTrigger>
+                <i:EventTrigger EventName="FilterChanging">
+                    <i:InvokeCommandAction
+                        Command="{Binding FilterChangingCommand}"
+                        EventArgsConverter="{StaticResource gridFilterEventArgsConverter}"
+                        EventArgsConverterParameter="{Binding}"
+                        PassEventArgsToCommand="True" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
         </syncfusion:SfDataGrid>

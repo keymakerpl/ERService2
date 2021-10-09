@@ -22,3 +22,15 @@ C:\_projekty\ERService2\ERService\ERService.Contracts\obj\Debug\net5.0\ERService
 C:\_projekty\ERService2\ERService\ERService.Contracts\obj\Debug\net5.0\ref\ERService.Contracts.dll
 C:\_projekty\ERService2\ERService\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.pdb
 C:\_projekty\ERService2\ERService\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.csproj.AssemblyReference.cache
+C:\_projekty\ERService2\ERService.Contracts\bin\Debug\net5.0\ERService.Contracts.deps.json
+C:\_projekty\ERService2\ERService.Contracts\bin\Debug\net5.0\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService.Contracts\bin\Debug\net5.0\ref\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService.Contracts\bin\Debug\net5.0\ERService.Contracts.pdb
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.AssemblyInfo.cs
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ref\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.pdb
+C:\_projekty\ERService2\ERService.Contracts\obj\Debug\net5.0\ERService.Contracts.csproj.AssemblyReference.cache

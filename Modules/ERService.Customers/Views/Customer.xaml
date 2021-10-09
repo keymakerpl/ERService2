@@ -2,119 +2,249 @@
     x:Class="ERService.Customers.Views.Customer"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="clr-namespace:ERService.Wpf.Converters;assembly=ERService.Wpf"
     xmlns:prism="http://prismlibrary.com/"
     xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
-    Width="1024"
     prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <Style TargetType="syncfusion:SfTextInputLayout">
+            <Setter Property="Margin" Value="15,10,15,0" />
+        </Style>
+        <converters:HasErrorConverter x:Key="hasErrorConverter" />
+        <converters:ValidationErrorConverter x:Key="validationErrorConverter" />
+    </UserControl.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <WrapPanel>
-            <Button
-                Width="80"
-                Margin="5"
-                Command="{Binding SaveCommand}"
-                Content="Zapisz" />
-        </WrapPanel>
-        <Grid
-            Grid.Row="1"
-            Margin="15"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top">
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Label
+                Margin="15,10,0,0"
+                Content="Klient:"
+                FontSize="14"
+                FontStyle="Italic" />
+            <Label
+                Margin="0,10,0,0"
+                Padding="0,5,0,5"
+                Content="{Binding Customer.FirstName, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                FontSize="14"
+                FontStyle="Italic"
+                FontWeight="SemiBold" />
+            <Label
+                Margin="0,10,0,0"
+                Padding="2,5,0,5"
+                Content="{Binding Customer.LastName, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=False, ValidatesOnDataErrors=False}"
+                FontSize="14"
+                FontStyle="Italic"
+                FontWeight="SemiBold" />
+        </StackPanel>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid Margin="15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
 
-            <WrapPanel Orientation="Vertical">
-                <GroupBox Header="Ogólne">
-                    <WrapPanel>
-                        <syncfusion:SfTextInputLayout Hint="Imię">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.FirstName}" />
+                <GroupBox Grid.Row="0" Header="Ogólne">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Imię">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Nazwisko">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.LastName}" />
+                        <syncfusion:SfTextInputLayout
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Nazwisko">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         </syncfusion:SfTextInputLayout>
-                    </WrapPanel>
+                    </Grid>
                 </GroupBox>
-                <GroupBox Header="Adres">
-                    <WrapPanel>
-                        <syncfusion:SfTextInputLayout Hint="Ulica">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.Street}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Numer domu">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.HouseNumber}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Miasto">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.City}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Kod pocztowy">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.Postcode}" />
-                        </syncfusion:SfTextInputLayout>
-                    </WrapPanel>
-                </GroupBox>
-                <GroupBox Header="Firma">
-                    <WrapPanel>
-                        <syncfusion:SfTextInputLayout Hint="Nazwa">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.CompanyName}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="NIP">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.NIP}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Ulica">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.Street}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Numer domu">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.HouseNumber}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Miasto">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.City}" />
-                        </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Kod pocztowy">
-                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.Postcode}" />
-                        </syncfusion:SfTextInputLayout>
-                    </WrapPanel>
-                </GroupBox>
-            </WrapPanel>
 
-            <WrapPanel Grid.Column="1" Orientation="Vertical">
-                <GroupBox Header="Kontakt">
-                    <WrapPanel>
-                        <syncfusion:SfTextInputLayout Hint="Telefon">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.PhoneNumber}" />
+                <GroupBox Grid.Row="1" Header="Kontakt">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Telefon">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.PhoneNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Telefon 2">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.PhoneNumber2}" />
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Telefon 2">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.PhoneNumber2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
                         </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Email">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.Email}" />
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Email">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
                         </syncfusion:SfTextInputLayout>
-                        <syncfusion:SfTextInputLayout Hint="Email 2">
-                            <syncfusion:SfTextBoxExt Text="{Binding Customer.Email2}" />
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Email 2">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.Email2, Mode=TwoWay, ValidatesOnNotifyDataErrors=True, UpdateSourceTrigger=PropertyChanged}" />
                         </syncfusion:SfTextInputLayout>
-                    </WrapPanel>
+                    </Grid>
                 </GroupBox>
-                <GroupBox Header="Pozostałe">
-                    <WrapPanel>
-                        <syncfusion:SfTextInputLayout Hint="Opis">
-                            <syncfusion:SfTextBoxExt
-                                MinWidth="300"
-                                MinLines="5"
-                                Text="{Binding Customer.Description}"
-                                TextWrapping="Wrap" />
-                        </syncfusion:SfTextInputLayout>
-                    </WrapPanel>
-                </GroupBox>
-            </WrapPanel>
 
-        </Grid>
+                <GroupBox Grid.Row="2" Header="Adres domowy">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Ulica">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.Street, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Numer domu">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.HouseNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Miasto">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.City, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Kod pocztowy">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerAddress.Postcode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Row="3" Header="Firma">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Nazwa">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.CompanyName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Nip">
+                            <syncfusion:SfTextBoxExt Text="{Binding Customer.NIP, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Ulica">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.Street, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Numer domu">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.HouseNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Miasto">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.City, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                        <syncfusion:SfTextInputLayout
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                            HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                            Hint="Kod pocztowy">
+                            <syncfusion:SfTextBoxExt Text="{Binding CustomerCompanyAddress.Postcode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </syncfusion:SfTextInputLayout>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Row="4" Header="Pozostałe">
+                    <syncfusion:SfTextInputLayout
+                        ErrorText="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource validationErrorConverter}}"
+                        HasError="{Binding RelativeSource={RelativeSource Mode=Self}, Mode=OneWay, Path=InputView.(Validation.Errors), Converter={StaticResource hasErrorConverter}}"
+                        Hint="Opis">
+                        <syncfusion:SfTextBoxExt
+                            MinLines="2"
+                            Text="{Binding Customer.Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                            TextWrapping="Wrap" />
+                    </syncfusion:SfTextInputLayout>
+                </GroupBox>
+            </Grid>
+        </ScrollViewer>
+
     </Grid>
 </UserControl>

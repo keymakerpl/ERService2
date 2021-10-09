@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\_projekty\ERService2\ERService\App.xaml
-1-1644662438
+2-31743797
 
-61266933213
-292-1950362614
-Views\MainWindow.xaml;
+8626137579
+296-124867923
+Views\DetailMenu.xaml;Views\MainWindow.xaml;
 
-False
+True
 

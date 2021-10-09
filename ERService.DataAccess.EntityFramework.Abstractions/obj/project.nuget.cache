@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ijl9FueSc6BoDyAl+O1mimyrnYGyIdw58dulWAwoWqk2v0jH3RaFpZRo3SJy8SOHwyImtBRmixafRwkwGaKp4A==",
+  "dgSpecHash": "BXISP1CaE3reS0fTVBrqvLtRiRjgDp1sna4Et5EhJ0pHaQEA8ra0VNKzVU5nKdS/RTY4clio7Uc4hu4nid2tUQ==",
   "success": true,
   "projectFilePath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj",
   "expectedPackageFiles": [

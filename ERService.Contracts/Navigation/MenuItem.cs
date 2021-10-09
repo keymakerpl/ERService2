@@ -6,7 +6,7 @@ namespace ERService.Contracts.Navigation
     {
         public object Icon { get; set; }
 
-        public string Name { get; set; }
+        public string Text { get; set; }
 
         public ICommand Command { get; set; }
     }

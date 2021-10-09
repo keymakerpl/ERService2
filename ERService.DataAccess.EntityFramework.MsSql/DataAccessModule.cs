@@ -13,6 +13,7 @@ namespace ERService.DataAccess.EntityFramework.SqlServer
             containerRegistry.Register<ERServiceDbContext>(() => new ERServiceDbContext())
                              .Register<IRepositoryFactory, RepositoryFactory>()
                              .Register<IContextFactory, DbContextFactory>()
-                             .Register<ICustomerRepository, CustomerRepository>();
+                             .Register<ICustomerRepository, CustomerRepository>()
+                             .Register<IOrderRepository, OrderRepository>();
     }
 }

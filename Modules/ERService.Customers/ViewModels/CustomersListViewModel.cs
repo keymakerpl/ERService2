@@ -1,73 +1,113 @@
-﻿using ERService.FunctionalCSharp;
-using ERService.Contracts.Constants;
+﻿using ERService.Contracts.Constants;
 using ERService.Contracts.Mapping;
+using ERService.Contracts.Messages;
+using ERService.Contracts.Navigation;
 using ERService.Customers.Models;
 using ERService.DataAccess.EntityFramework.Abstractions;
-using Prism.Commands;
-using Prism.Mvvm;
+using ERService.DataAccess.EntityFramework.Entities;
+using ERService.FunctionalCSharp;
+using ERService.Wpf;
+using Prism.Events;
 using Prism.Regions;
 using Syncfusion.UI.Xaml.Grid;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
-using System.Windows.Input;
+using System.Windows;
 
 namespace ERService.Customers.ViewModels
 {
-    public class CustomersListViewModel : BindableBase, INavigationAware, IRegionMemberLifetime
+    public partial class CustomersListViewModel : GenericListViewModel<CustomerLookupItem<int>, Customer>, IDetailMenuItems
     {
-        private readonly IRepositoryFactory repositoryFactory;
         private readonly IMappingProvider mappingProvider;
         private readonly IRegionManager regionManager;
+        private readonly IRepositoryFactory repositoryFactory;
+        private readonly IEventAggregator eventAggregator;
+        private readonly INotificationProvider notificationProvider;
+        private readonly ResourceDictionary resourceDictionary;
 
-        public ICommand DataGridMouseDoubleClick { get; }
-        public IncrementalList<CustomerLookupItem<int>> Customers { get; }
-
-        public bool KeepAlive => false;
-
-        public CustomersListViewModel(IRepositoryFactory repositoryFactory, IMappingProvider mappingProvider, IRegionManager regionManager) 
+        public CustomersListViewModel(IRepositoryFactory repositoryFactory,
+                                      IEventAggregator eventAggregator,
+                                      INotificationProvider notificationProvider,
+                                      IMappingProvider mappingProvider,
+                                      IRegionManager regionManager,
+                                      ResourceDictionary resourceDictionary)
         {
             this.repositoryFactory = repositoryFactory;
             this.mappingProvider = mappingProvider;
             this.regionManager = regionManager;
+            this.eventAggregator = eventAggregator;
+            this.notificationProvider = notificationProvider;
+            this.resourceDictionary = resourceDictionary;
 
-            DataGridMouseDoubleClick = new DelegateCommand<MouseButtonEventArgs>(OnMouseDoubleClick);
-
-            Customers = new IncrementalList<CustomerLookupItem<int>>(async (count, baseIndex) =>
-                await LoadMoreItems(count, baseIndex)) { MaxItemCount = 100 };
+            Items = new IncrementalList<CustomerLookupItem<int>>((count, baseIndex) =>
+            LoadItems((count, baseIndex, Filter)))
+            { MaxItemCount = 100 };
         }
 
-        private void OnMouseDoubleClick(MouseButtonEventArgs args) => 
-            Maybe.From(args.Source as SfDataGrid)
-                 .ToResult("Expected SfDataGrid")
-                 .Ensure(grid => grid.SelectedItem != null, "Nothing selected")
-                 .Ensure(grid => grid.SelectedItem is CustomerLookupItem<int>, "Expected CustomerLookupItem")
-                 .Map(grid => grid.SelectedItem as CustomerLookupItem<int>)
-                 .Tap(selectedElement =>
-                 {
-                     var parameters = new NavigationParameters();
-                     parameters.Add("id", selectedElement.Id);
-                     regionManager.Regions[RegionNames.ContentRegion]
-                                  .RequestNavigate(ViewNames.CustomerView, parameters);
-                 });
+        protected override Func<Result> AddItem => () =>
+            Result.Try(() =>
+            Dispatcher.Invoke(() =>
+            regionManager.Regions[RegionNames.DetailRegion]
+                         .RequestNavigate(ViewNames.CustomerView))
+            );
 
-        private async Task LoadMoreItems(uint count, int baseIndex) 
+        protected override Func<CustomerLookupItem<int>, Task<Result>> RemoveItem =>
+            async selectedCustomer => await repositoryFactory.GetRepository<ICustomerRepository>()
+                                                             .RemoveById(selectedCustomer.Id);
+
+        protected override Action<CustomerLookupItem<int>> OpenItem => 
+            selectedCustomer => 
+            {
+                var parameters = new NavigationParameters();
+                parameters.Add("id", selectedCustomer.Id);
+                Dispatcher.Invoke(() =>
+                regionManager.Regions[RegionNames.DetailRegion]
+                             .RequestNavigate(ViewNames.CustomerView, parameters));
+            };
+
+        protected override Action<LoadItemsParameters<Customer>> LoadItems =>
+            async parameters =>
+            await Result.Try(() => repositoryFactory.GetRepository<ICustomerRepository>())
+                        .Map(async repository => await repository.FindByAsync(parameters.FilterPredicate,
+                                                                              parameters.BaseIndex,
+                                                                              (int)parameters.Count).ConfigureAwait(false))
+                        .Map(customersFromRepo => mappingProvider.MapTo<IEnumerable<CustomerLookupItem<int>>>(customersFromRepo))
+                        .Tap(customersToAdd => ((IncrementalList<CustomerLookupItem<int>>)Items).LoadItems(customersToAdd));
+
+        protected override Action OnItemRemoved =>
+            async () =>
+            {
+                await Result.Try(() => (Items as IncrementalList<CustomerLookupItem<int>>)?.Remove(SelectedItem))
+                            .Ensure(isRemoved => isRemoved.HasValue, "Cannot remove item from list")
+                            .Ensure(isRemoved => isRemoved.Value, "Cannot remove item from list")
+                            .Tap(async () =>
+                            await notificationProvider.ShowSuccess("Usunięto element...", "Element został usunięty z bazy danych"));
+            };
+
+        protected override Action OnItemAdded =>
+            () => notificationProvider.ShowSuccess("Dodano klienta...", "Element został dodany do bazy danych");
+
+        protected override Action<Expression<Func<Customer, bool>>> OnFilterChanged =>
+            async _ => await (Items as IncrementalList<CustomerLookupItem<int>>)?.LoadMoreItemsAsync(100);
+
+        public IEnumerable<DetailMenuItem> DetailMenuItems()
         {
-            var repository = repositoryFactory.GetRepository<ICustomerRepository>();
-            var customersToAdd = await repository.FindByAsync(x => true, baseIndex, (int)count);
-            Customers.LoadItems(mappingProvider.MapTo<IEnumerable<CustomerLookupItem<int>>>(customersToAdd));
-        }
-
-        public void OnNavigatedTo(NavigationContext navigationContext)
-        {
-            
-        }
-
-        public bool IsNavigationTarget(NavigationContext navigationContext) => true;
-
-        public void OnNavigatedFrom(NavigationContext navigationContext)
-        {
-            
+            yield return new DetailMenuItem
+            {
+                Text = "Dodaj",
+                Command = AddItemCommand,
+                Order = 1,
+                Icon = resourceDictionary["PlusCircle"]
+            };
+            yield return new DetailMenuItem
+            {
+                Text = "Usuń",
+                Command = RemoveItemCommand,
+                Order = 2,
+                Icon = resourceDictionary["MinusCircle"]
+            };
         }
     }
 }

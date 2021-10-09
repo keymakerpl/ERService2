@@ -1,0 +1,12 @@
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\bin\Debug\net5.0-windows\ERService.OrderWizard.deps.json
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\bin\Debug\net5.0-windows\ERService.OrderWizard.dll
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\bin\Debug\net5.0-windows\ref\ERService.OrderWizard.dll
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\bin\Debug\net5.0-windows\ERService.OrderWizard.pdb
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ERService.OrderWizard.csproj.AssemblyReference.cache
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ERService.OrderWizard.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ERService.OrderWizard.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ERService.OrderWizard.AssemblyInfo.cs
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ERService.OrderWizard.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ERService.OrderWizard.dll
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ref\ERService.OrderWizard.dll
+C:\_projekty\ERService2\Modules\ERService.OrderWizard\obj\Debug\net5.0-windows\ERService.OrderWizard.pdb

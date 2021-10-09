@@ -12,10 +12,10 @@
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
     <PackageReference Include="Prism.Core" Version="8.1.97" />
     <PackageReference Include="Prism.Unity" Version="8.1.97" />
-      <PackageReference Include="Syncfusion.SfGrid.WPF" Version="19.2.0.44" />
-      <PackageReference Include="Syncfusion.SfTextInputLayout.WPF" Version="19.2.0.44" />
-    <PackageReference Include="Syncfusion.SfInput.WPF" Version="19.2.0.44" />
-    <PackageReference Include="Syncfusion.Tools.WPF" Version="19.2.0.44" />
+      <PackageReference Include="Syncfusion.SfGrid.WPF" Version="19.2.0.59" />
+      <PackageReference Include="Syncfusion.SfTextInputLayout.WPF" Version="19.2.0.59" />
+    <PackageReference Include="Syncfusion.SfInput.WPF" Version="19.2.0.59" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="19.2.0.59" />
 </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +23,7 @@
     <ProjectReference Include="..\..\ERService.DataAccess.EntityFramework.Abstractions\ERService.DataAccess.EntityFramework.Abstractions.csproj" />
     <ProjectReference Include="..\..\ERService.FunctionalCSharp\ERService.FunctionalCSharp.csproj" />
     <ProjectReference Include="..\..\ERService.Mvvm\ERService.Mvvm.csproj" />
+    <ProjectReference Include="..\..\ERService.Wpf\ERService.Wpf.csproj" />
   </ItemGroup>
 
   <ItemGroup>

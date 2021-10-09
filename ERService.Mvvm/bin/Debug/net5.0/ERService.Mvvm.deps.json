@@ -10,7 +10,8 @@
         "dependencies": {
           "ERService.Contracts": "1.0.0",
           "ERService.DataAccess.EntityFramework.Entities": "1.0.0",
-          "Prism.Core": "8.1.97"
+          "Prism.Core": "8.1.97",
+          "Syncfusion.Tools.WPF": "19.2.0.59"
         },
         "runtime": {
           "ERService.Mvvm.dll": {}
@@ -160,6 +161,37 @@
           "lib/net5.0/Prism.dll": {
             "assemblyVersion": "8.1.97.5141",
             "fileVersion": "8.1.97.5141"
+          }
+        }
+      },
+      "Syncfusion.Licensing/19.2.0.59": {
+        "runtime": {
+          "lib/net5.0/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "19.2.0.59",
+            "fileVersion": "19.2.0.59"
+          }
+        }
+      },
+      "Syncfusion.Shared.WPF/19.2.0.59": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.2.0.59"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Shared.WPF.dll": {
+            "assemblyVersion": "19.2310.0.59",
+            "fileVersion": "19.2310.0.59"
+          }
+        }
+      },
+      "Syncfusion.Tools.WPF/19.2.0.59": {
+        "dependencies": {
+          "Syncfusion.Licensing": "19.2.0.59",
+          "Syncfusion.Shared.WPF": "19.2.0.59"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Tools.WPF.dll": {
+            "assemblyVersion": "19.2310.0.59",
+            "fileVersion": "19.2310.0.59"
           }
         }
       },
@@ -402,6 +434,27 @@
       "sha512": "sha512-EP5zrvWddw3eSq25Y7hHnDYdmLZEC2Z/gMrvmHzUuLbitmA1UaS7wQUlSwNr9Km8lzJNCvytFnaGBEFukHgoHg==",
       "path": "prism.core/8.1.97",
       "hashPath": "prism.core.8.1.97.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/19.2.0.59": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+0/w/CcemPyJvz2gXIkUZA9+tJjW43jC/Yb1q2BrA4crmUXEP8n5U4+++Ct8a3mgKF6yCj6qC0dyiHouM9AFLQ==",
+      "path": "syncfusion.licensing/19.2.0.59",
+      "hashPath": "syncfusion.licensing.19.2.0.59.nupkg.sha512"
+    },
+    "Syncfusion.Shared.WPF/19.2.0.59": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dVadDizDhJdjifdNCOt0/2OHCa3Hror4PvgtkSL1Sc1PPXV3vCgzN2hWaPYS4oLNPcrh1NMEG8RiXlgmT+pMlQ==",
+      "path": "syncfusion.shared.wpf/19.2.0.59",
+      "hashPath": "syncfusion.shared.wpf.19.2.0.59.nupkg.sha512"
+    },
+    "Syncfusion.Tools.WPF/19.2.0.59": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Bs3Mh7PYPerejZfDCKPlMuD21SabMr4Ov1DsCer0qlNqu53A8IhSMGgJdmcDqxOU0e5w3iC0r6HxIDVddrSO+Q==",
+      "path": "syncfusion.tools.wpf/19.2.0.59",
+      "hashPath": "syncfusion.tools.wpf.19.2.0.59.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",

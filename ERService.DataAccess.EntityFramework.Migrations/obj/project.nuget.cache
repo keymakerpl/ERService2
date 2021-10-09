@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FVMjg2nkqge31FK3m986fuhs9Ajzv4eWIo6UD99JZt2NiZYnWsOWoF/kTlkJwLPoDXk/9QBfNmWf72TA2YAZqA==",
+  "dgSpecHash": "abqGe47t/xcwYz0F5A0jIKtltHc4wX1HKwPnYeGpLkpU0of5fGsRmX+W5R+4oMLNdm75zvpRwJIoUxMb1eEm6A==",
   "success": true,
   "projectFilePath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Migrations\\ERService.DataAccess.EntityFramework.Migrations.csproj",
   "expectedPackageFiles": [

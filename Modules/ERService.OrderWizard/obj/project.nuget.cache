@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "l+J2GvZGwUMzhUPxih/ms5L2j2S5Kf6NGKKyMulFauYky8fPcbihGGLH7P1p+fHygPg1nAn6pW092v2vKtrlNw==",
+  "success": true,
+  "projectFilePath": "C:\\_projekty\\ERService2\\Modules\\ERService.OrderWizard\\ERService.OrderWizard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Radek\\.nuget\\packages\\prism.core\\8.1.97\\prism.core.8.1.97.nupkg.sha512"
+  ],
+  "logs": []
+}

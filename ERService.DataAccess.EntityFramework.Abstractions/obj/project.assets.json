@@ -386,6 +386,16 @@
         "runtime": {
           "bin/placeholder/ERService.DataAccess.EntityFramework.Entities.dll": {}
         }
+      },
+      "ERService.FunctionalCSharp/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ERService.FunctionalCSharp.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ERService.FunctionalCSharp.dll": {}
+        }
       }
     }
   },
@@ -1694,11 +1704,17 @@
       "type": "project",
       "path": "../ERService.DataAccess.EntityFramework.Entities/ERService.DataAccess.EntityFramework.Entities.csproj",
       "msbuildProject": "../ERService.DataAccess.EntityFramework.Entities/ERService.DataAccess.EntityFramework.Entities.csproj"
+    },
+    "ERService.FunctionalCSharp/1.0.0": {
+      "type": "project",
+      "path": "../ERService.FunctionalCSharp/ERService.FunctionalCSharp.csproj",
+      "msbuildProject": "../ERService.FunctionalCSharp/ERService.FunctionalCSharp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "ERService.DataAccess.EntityFramework.Entities >= 1.0.0"
+      "ERService.DataAccess.EntityFramework.Entities >= 1.0.0",
+      "ERService.FunctionalCSharp >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1735,6 +1751,9 @@
           "projectReferences": {
             "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj": {
               "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj"
+            },
+            "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+              "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj"
             }
           }
         }

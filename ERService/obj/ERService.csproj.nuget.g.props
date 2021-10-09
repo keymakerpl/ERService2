@@ -21,14 +21,14 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\Radek\.nuget\packages\newtonsoft.json\10.0.1</PkgNewtonsoft_Json>
-    <PkgSyncfusion_Shared_WPF Condition=" '$(PkgSyncfusion_Shared_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.shared.wpf\19.2.0.44</PkgSyncfusion_Shared_WPF>
-    <PkgSyncfusion_Tools_WPF Condition=" '$(PkgSyncfusion_Tools_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.tools.wpf\19.2.0.44</PkgSyncfusion_Tools_WPF>
-    <PkgSyncfusion_SfInput_WPF Condition=" '$(PkgSyncfusion_SfInput_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sfinput.wpf\19.2.0.44</PkgSyncfusion_SfInput_WPF>
+    <PkgSyncfusion_Shared_WPF Condition=" '$(PkgSyncfusion_Shared_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.shared.wpf\19.2.0.59</PkgSyncfusion_Shared_WPF>
+    <PkgSyncfusion_Tools_WPF Condition=" '$(PkgSyncfusion_Tools_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.tools.wpf\19.2.0.59</PkgSyncfusion_Tools_WPF>
+    <PkgSyncfusion_SfInput_WPF Condition=" '$(PkgSyncfusion_SfInput_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sfinput.wpf\19.2.0.59</PkgSyncfusion_SfInput_WPF>
     <PkgSyncfusion_PropertyGrid_WPF Condition=" '$(PkgSyncfusion_PropertyGrid_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.propertygrid.wpf\19.2.0.44</PkgSyncfusion_PropertyGrid_WPF>
-    <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.shared.base\19.2.0.44</PkgSyncfusion_Shared_Base>
-    <PkgSyncfusion_SfTextInputLayout_WPF Condition=" '$(PkgSyncfusion_SfTextInputLayout_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sftextinputlayout.wpf\19.2.0.44</PkgSyncfusion_SfTextInputLayout_WPF>
-    <PkgSyncfusion_SfNavigationDrawer_WPF Condition=" '$(PkgSyncfusion_SfNavigationDrawer_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sfnavigationdrawer.wpf\19.2.0.44</PkgSyncfusion_SfNavigationDrawer_WPF>
-    <PkgSyncfusion_SfGrid_WPF Condition=" '$(PkgSyncfusion_SfGrid_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sfgrid.wpf\19.2.0.44</PkgSyncfusion_SfGrid_WPF>
+    <PkgSyncfusion_Shared_Base Condition=" '$(PkgSyncfusion_Shared_Base)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.shared.base\19.2.0.59</PkgSyncfusion_Shared_Base>
+    <PkgSyncfusion_SfTextInputLayout_WPF Condition=" '$(PkgSyncfusion_SfTextInputLayout_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sftextinputlayout.wpf\19.2.0.59</PkgSyncfusion_SfTextInputLayout_WPF>
+    <PkgSyncfusion_SfNavigationDrawer_WPF Condition=" '$(PkgSyncfusion_SfNavigationDrawer_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sfnavigationdrawer.wpf\19.2.0.59</PkgSyncfusion_SfNavigationDrawer_WPF>
+    <PkgSyncfusion_SfGrid_WPF Condition=" '$(PkgSyncfusion_SfGrid_WPF)' == '' ">C:\Users\Radek\.nuget\packages\syncfusion.sfgrid.wpf\19.2.0.59</PkgSyncfusion_SfGrid_WPF>
     <PkgMicrosoft_Xaml_Behaviors_Wpf Condition=" '$(PkgMicrosoft_Xaml_Behaviors_Wpf)' == '' ">C:\Users\Radek\.nuget\packages\microsoft.xaml.behaviors.wpf\1.1.31</PkgMicrosoft_Xaml_Behaviors_Wpf>
   </PropertyGroup>
 </Project>

@@ -14,12 +14,16 @@ namespace ERService.DataAccess.EntityFramework.SqlServer.Repositories
 
         }
 
-        public override async Task<Customer> GetByIdAsync(int id) =>
+        public override async Task<Maybe<Customer>> GetByIdAsync(int id) =>
             await Disposable.Of(() => contextFactory.CreateContext<ERServiceDbContext>())
-                            .Use(async context => await context.Set<Customer>().Include(a => a.CustomerAddresses).SingleAsync(c => c.Id == id));
+                            .Use(async context => await context.Set<Customer>()
+                                                               .Include(a => a.CustomerAddresses)
+                                                               .SingleOrDefaultAsync(c => c.Id == id));
 
         public override async Task<IEnumerable<Customer>> GetAllAsync() =>
             await Disposable.Of(() => contextFactory.CreateContext<ERServiceDbContext>())
-                            .Use(async context => await context.Set<Customer>().Include(a => a.CustomerAddresses).ToListAsync());
+                            .Use(async context => await context.Set<Customer>()
+                                                               .Include(a => a.CustomerAddresses)
+                                                               .ToListAsync());
     }
 }

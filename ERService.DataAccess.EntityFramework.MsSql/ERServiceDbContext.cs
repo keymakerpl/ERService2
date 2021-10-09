@@ -52,6 +52,7 @@ namespace ERService.DataAccess.EntityFramework.SqlServer
                         .ApplyConfiguration(new SettingConfiguration())
                         .ApplyConfiguration(new HardwareTypeConfiguration())
                         .ApplyConfiguration(new CustomItemConfiguration())
+                        .ApplyConfiguration(new CustomerConfiguration())
                         .ApplyConfiguration(new OrderStatusConfiguration())
                         .ApplyConfiguration(new OrderTypeConfiguration());
         }

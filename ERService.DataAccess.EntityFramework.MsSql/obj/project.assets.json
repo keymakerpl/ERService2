@@ -1568,7 +1568,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "ERService.DataAccess.EntityFramework.Entities": "1.0.0"
+          "ERService.DataAccess.EntityFramework.Entities": "1.0.0",
+          "ERService.FunctionalCSharp": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ERService.DataAccess.EntityFramework.Abstractions.dll": {}

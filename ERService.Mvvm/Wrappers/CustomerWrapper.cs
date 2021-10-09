@@ -1,5 +1,6 @@
 ﻿using ERService.DataAccess.EntityFramework.Entities;
 using ERService.Mvvm.Base;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
@@ -16,7 +17,7 @@ namespace ERService.Mvvm.Wrappers
         private string _nip;
         private string _phoneNumber;
         private string _phoneNumber2;
-        
+
         public CustomerWrapper(Customer model) : base(model)
         {
         }
@@ -36,13 +37,13 @@ namespace ERService.Mvvm.Wrappers
         public string Email
         {
             get => GetProperty<string>();
-            set => SetProperty(ref _email, value);
+            set => SetProperty(ref _email, value is "" ? null : value);
         }
 
         public string Email2
         {
             get => GetProperty<string>();
-            set => SetProperty(ref _email2, value);
+            set => SetProperty(ref _email2, value is "" ? null : value);
         }
 
         public string FirstName
@@ -57,6 +58,11 @@ namespace ERService.Mvvm.Wrappers
             set => SetProperty(ref _lastName, value);
         }
 
+        public string FullName
+        {
+            get => GetProperty<string>();
+        }
+
         public string NIP
         {
             get => GetProperty<string>();
@@ -66,13 +72,13 @@ namespace ERService.Mvvm.Wrappers
         public string PhoneNumber
         {
             get => GetProperty<string>();
-            set => SetProperty(ref _phoneNumber, value);
+            set => SetProperty(ref _phoneNumber, value is "" ? null : value);
         }
 
         public string PhoneNumber2
         {
             get => GetProperty<string>();
-            set => SetProperty(ref _phoneNumber2, value);
+            set => SetProperty(ref _phoneNumber2, value is "" ? null : value);
         }
 
         #region Relations

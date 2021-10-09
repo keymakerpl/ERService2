@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "u4KKvcqAsj7xi9cCn00hICpOg4qF++Zbyv0rJyD/kV96GuUsCJEMuZUFsSBVWmcW3scHmsGzGnFKc0zRFnfpnw==",
+  "dgSpecHash": "qf7Esc+HbKWluuLRstrBqzX0hXzPwFTqEQg1vpmmZvCQ0M7ea0JsoGkNhd6w9D9FtFKoBLs2SFsoqTvSijf2bA==",
   "success": true,
   "projectFilePath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.MsSql\\ERService.DataAccess.EntityFramework.SqlServer.csproj",
   "expectedPackageFiles": [

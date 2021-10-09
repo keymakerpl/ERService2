@@ -29,7 +29,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERService.Core", "ERService
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERService.Mvvm", "ERService.Mvvm\ERService.Mvvm.csproj", "{F427F737-62AE-4E5C-98F9-AAC8D5EFF854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERService.DataAccess.EntityFramework.Migrations", "ERService.DataAccess.EntityFramework.Migrations\ERService.DataAccess.EntityFramework.Migrations.csproj", "{ABAD94A7-766F-4EBC-BC5C-1E9C4062D221}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERService.DataAccess.EntityFramework.Migrations", "ERService.DataAccess.EntityFramework.Migrations\ERService.DataAccess.EntityFramework.Migrations.csproj", "{ABAD94A7-766F-4EBC-BC5C-1E9C4062D221}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERService.Wpf", "ERService.Wpf\ERService.Wpf.csproj", "{C7878DA3-DD2D-467D-A4E4-BAA34A541176}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ERService.MessageProvider", "ERService.MessageProvider\ERService.MessageProvider.csproj", "{7FB886AA-9951-41E7-BE4B-5FE22234A2B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERService.OrderWizard", "Modules\ERService.OrderWizard\ERService.OrderWizard.csproj", "{01F09D6A-1FB7-4BA1-B3B9-945790D39944}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERService.Orders", "Modules\ERService.Orders\ERService.Orders.csproj", "{AB22C460-BD05-46E7-BBA8-F1C694F15A4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +93,22 @@ Global
 		{ABAD94A7-766F-4EBC-BC5C-1E9C4062D221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABAD94A7-766F-4EBC-BC5C-1E9C4062D221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABAD94A7-766F-4EBC-BC5C-1E9C4062D221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7878DA3-DD2D-467D-A4E4-BAA34A541176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7878DA3-DD2D-467D-A4E4-BAA34A541176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7878DA3-DD2D-467D-A4E4-BAA34A541176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7878DA3-DD2D-467D-A4E4-BAA34A541176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB886AA-9951-41E7-BE4B-5FE22234A2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB886AA-9951-41E7-BE4B-5FE22234A2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB886AA-9951-41E7-BE4B-5FE22234A2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB886AA-9951-41E7-BE4B-5FE22234A2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01F09D6A-1FB7-4BA1-B3B9-945790D39944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01F09D6A-1FB7-4BA1-B3B9-945790D39944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01F09D6A-1FB7-4BA1-B3B9-945790D39944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01F09D6A-1FB7-4BA1-B3B9-945790D39944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB22C460-BD05-46E7-BBA8-F1C694F15A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB22C460-BD05-46E7-BBA8-F1C694F15A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB22C460-BD05-46E7-BBA8-F1C694F15A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB22C460-BD05-46E7-BBA8-F1C694F15A4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +119,8 @@ Global
 		{1284DE48-AF3E-4D29-91DA-7E888E1382D1} = {6C020CF7-7210-4939-8589-8842A8B10B39}
 		{F3E67F12-ED79-4639-B675-CD7BE257A920} = {06ED535C-F4DB-4E0F-ACD0-0BCEF7A97759}
 		{ABAD94A7-766F-4EBC-BC5C-1E9C4062D221} = {6C020CF7-7210-4939-8589-8842A8B10B39}
+		{01F09D6A-1FB7-4BA1-B3B9-945790D39944} = {06ED535C-F4DB-4E0F-ACD0-0BCEF7A97759}
+		{AB22C460-BD05-46E7-BBA8-F1C694F15A4A} = {06ED535C-F4DB-4E0F-ACD0-0BCEF7A97759}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55A19A9E-2D8C-4415-AB28-CA26AA4D1CAA}

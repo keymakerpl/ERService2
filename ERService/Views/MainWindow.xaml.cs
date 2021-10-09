@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ERService.Contracts.Constants;
+using Prism.Regions;
 using Syncfusion.SfSkinManager;
 using Syncfusion.Windows.Shared;
 
@@ -24,6 +26,7 @@ namespace ERService.Views
         #region Fields
         private string currentVisualStyle;
         private string currentSizeMode;
+        private readonly IRegionManager regionManager;
         #endregion
 
         #region Properties
@@ -58,10 +61,27 @@ namespace ERService.Views
         }
         #endregion
 
-        public MainWindow() {
+        public MainWindow(IRegionManager regionManager) {
             InitializeComponent();
             this.Loaded += OnLoaded;
+
+            this.regionManager = regionManager;
+            var detail = LogicalTreeHelper.GetParent(this.detailRegion);
+            var detailMenu = LogicalTreeHelper.GetParent(this.detailMenuRegion);
+
+            if (regionManager != null)
+            {
+                SetRegionManager(regionManager, this.detailRegion, RegionNames.DetailRegion);
+                SetRegionManager(regionManager, this.detailMenuRegion, RegionNames.DetailMenuRegion);
+            }
         }
+
+        void SetRegionManager(IRegionManager regionManager, DependencyObject regionTarget, string regionName)
+        {
+            RegionManager.SetRegionName(regionTarget, regionName);
+            RegionManager.SetRegionManager(regionTarget, regionManager);
+        }
+
         /// <summary>
         /// Called when [loaded].
         /// </summary>

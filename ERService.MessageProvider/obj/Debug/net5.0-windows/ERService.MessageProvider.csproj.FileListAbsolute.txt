@@ -1,0 +1,15 @@
+C:\_projekty\ERService2\ERService.MessageProvider\bin\Debug\net5.0-windows\ERService.MessageProvider.deps.json
+C:\_projekty\ERService2\ERService.MessageProvider\bin\Debug\net5.0-windows\ERService.MessageProvider.dll
+C:\_projekty\ERService2\ERService.MessageProvider\bin\Debug\net5.0-windows\ref\ERService.MessageProvider.dll
+C:\_projekty\ERService2\ERService.MessageProvider\bin\Debug\net5.0-windows\ERService.MessageProvider.pdb
+C:\_projekty\ERService2\ERService.MessageProvider\bin\Debug\net5.0-windows\ERService.Contracts.dll
+C:\_projekty\ERService2\ERService.MessageProvider\bin\Debug\net5.0-windows\ERService.Contracts.pdb
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.csproj.AssemblyReference.cache
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.GeneratedMSBuildEditorConfig.editorconfig
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.AssemblyInfoInputs.cache
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.AssemblyInfo.cs
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.csproj.CoreCompileInputs.cache
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.csproj.CopyComplete
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.dll
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ref\ERService.MessageProvider.dll
+C:\_projekty\ERService2\ERService.MessageProvider\obj\Debug\net5.0-windows\ERService.MessageProvider.pdb

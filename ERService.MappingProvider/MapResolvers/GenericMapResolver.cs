@@ -5,11 +5,11 @@ using System.Linq;
 
 namespace ERService.MappingProvider
 {
-    internal abstract class MapResolver<TDestinationBaseType, TSourceBaseType> : IMapResolver
+    internal abstract class GenericMapResolver<TDestinationBaseType, TSourceBaseType> : IMapResolver
     {
         private readonly IAssemblyManager assemblyManager;
 
-        public MapResolver(IAssemblyManager assemblyManager) =>
+        public GenericMapResolver(IAssemblyManager assemblyManager) =>
             this.assemblyManager = assemblyManager;
 
         public abstract Func<(Type source, Type destination), bool> Comparer { get; }

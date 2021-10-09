@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "ERService.DataAccess.EntityFramework.Abstractions/1.0.0": {
         "dependencies": {
-          "ERService.DataAccess.EntityFramework.Entities": "1.0.0"
+          "ERService.DataAccess.EntityFramework.Entities": "1.0.0",
+          "ERService.FunctionalCSharp": "1.0.0"
         },
         "runtime": {
           "ERService.DataAccess.EntityFramework.Abstractions.dll": {}
@@ -280,6 +281,11 @@
         "runtime": {
           "ERService.DataAccess.EntityFramework.Entities.dll": {}
         }
+      },
+      "ERService.FunctionalCSharp/1.0.0": {
+        "runtime": {
+          "ERService.FunctionalCSharp.dll": {}
+        }
       }
     }
   },
@@ -512,6 +518,11 @@
       "sha512": ""
     },
     "ERService.DataAccess.EntityFramework.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ERService.FunctionalCSharp/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

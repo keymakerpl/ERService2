@@ -102,6 +102,9 @@
             "projectReferences": {
               "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj"
               }
             }
           }
@@ -191,6 +194,64 @@
               "version": "[5.0.9, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj",
+        "projectName": "ERService.FunctionalCSharp",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",

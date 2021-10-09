@@ -15,5 +15,12 @@ namespace ERService.Core.RunTime
                                                                    && !type.IsInterface
                                                                    && !type.IsAbstract))
                                    .Aggregate((a1, a2) => a1.Concat(a2));
+
+        public IEnumerable<Type> GetTypesByName(string typeName) =>
+            AppDomain.CurrentDomain.GetAssemblies()
+                                   .ToList()
+                                   .Select(assembly => assembly.GetTypes()
+                                                               .Where(type => type.Name == typeName))
+                                   .Aggregate((a1, a2) => a1.Concat(a2));
     }
 }

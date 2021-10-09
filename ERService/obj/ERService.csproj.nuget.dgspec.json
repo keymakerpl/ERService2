@@ -164,6 +164,9 @@
             "projectReferences": {
               "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Entities\\ERService.DataAccess.EntityFramework.Entities.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj"
               }
             }
           }
@@ -520,15 +523,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
             "projectReferences": {
               "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj"
@@ -549,8 +552,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -580,6 +583,77 @@
         }
       }
     },
+    "C:\\_projekty\\ERService2\\ERService.MessageProvider\\ERService.MessageProvider.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.MessageProvider\\ERService.MessageProvider.csproj",
+        "projectName": "ERService.MessageProvider",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.MessageProvider\\ERService.MessageProvider.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.MessageProvider\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Notifications2.Wpf.Core": {
+              "target": "Package",
+              "version": "[1.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\_projekty\\ERService2\\ERService.Mvvm\\ERService.Mvvm.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -598,15 +672,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net5.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
             "projectReferences": {
               "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj"
@@ -624,8 +698,8 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
           "dependencies": {
             "Prism.Core": {
               "target": "Package",
@@ -645,6 +719,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
@@ -719,6 +796,88 @@
         }
       }
     },
+    "C:\\_projekty\\ERService2\\ERService.Wpf\\ERService.Wpf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\ERService.Wpf\\ERService.Wpf.csproj",
+        "projectName": "ERService.Wpf",
+        "projectPath": "C:\\_projekty\\ERService2\\ERService.Wpf\\ERService.Wpf.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\ERService.Wpf\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.FunctionalCSharp\\ERService.FunctionalCSharp.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.Mvvm\\ERService.Mvvm.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.Mvvm\\ERService.Mvvm.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "Syncfusion.SfGrid.WPF": {
+              "target": "Package",
+              "version": "[19.2.0.59, )"
+            },
+            "Syncfusion.SfTextInputLayout.WPF": {
+              "target": "Package",
+              "version": "[19.2.0.59, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\_projekty\\ERService2\\ERService\\ERService.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -762,8 +921,17 @@
               "C:\\_projekty\\ERService2\\ERService.MappingProvider\\ERService.MappingProvider.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\ERService.MappingProvider\\ERService.MappingProvider.csproj"
               },
+              "C:\\_projekty\\ERService2\\ERService.MessageProvider\\ERService.MessageProvider.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.MessageProvider\\ERService.MessageProvider.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.Wpf\\ERService.Wpf.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.Wpf\\ERService.Wpf.csproj"
+              },
               "C:\\_projekty\\ERService2\\Modules\\ERService.Customers\\ERService.Customers.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\Modules\\ERService.Customers\\ERService.Customers.csproj"
+              },
+              "C:\\_projekty\\ERService2\\Modules\\ERService.Orders\\ERService.Orders.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\Modules\\ERService.Orders\\ERService.Orders.csproj"
               }
             }
           }
@@ -788,29 +956,33 @@
               "target": "Package",
               "version": "[5.0.9, )"
             },
+            "Notifications2.Wpf.Core": {
+              "target": "Package",
+              "version": "[1.3.4, )"
+            },
             "Prism.Unity": {
               "target": "Package",
               "version": "[8.1.97, )"
             },
             "Syncfusion.SfChromelessWindow.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.SfNavigationDrawer.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.SfSkinManager.Wpf": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.SfTextInputLayout.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Shared.Base": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Shared.MVVM.WPF": {
               "target": "Package",
@@ -818,31 +990,31 @@
             },
             "Syncfusion.Shared.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Themes.Blend.Wpf": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Themes.FluentLight.Wpf": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Themes.Lime.Wpf": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Themes.Metro.Wpf": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Themes.Saffron.Wpf": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Tools.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             }
           },
           "imports": [
@@ -906,6 +1078,9 @@
               },
               "C:\\_projekty\\ERService2\\ERService.Mvvm\\ERService.Mvvm.csproj": {
                 "projectPath": "C:\\_projekty\\ERService2\\ERService.Mvvm\\ERService.Mvvm.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.Wpf\\ERService.Wpf.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.Wpf\\ERService.Wpf.csproj"
               }
             }
           }
@@ -934,19 +1109,19 @@
             },
             "Syncfusion.SfGrid.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.SfInput.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.SfTextInputLayout.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             },
             "Syncfusion.Tools.WPF": {
               "target": "Package",
-              "version": "[19.2.0.44, )"
+              "version": "[19.2.0.59, )"
             }
           },
           "imports": [
@@ -964,6 +1139,91 @@
               "privateAssets": "all"
             },
             "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\_projekty\\ERService2\\Modules\\ERService.Orders\\ERService.Orders.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\_projekty\\ERService2\\Modules\\ERService.Orders\\ERService.Orders.csproj",
+        "projectName": "ERService.Orders",
+        "projectPath": "C:\\_projekty\\ERService2\\Modules\\ERService.Orders\\ERService.Orders.csproj",
+        "packagesPath": "C:\\Users\\Radek\\.nuget\\packages\\",
+        "outputPath": "C:\\_projekty\\ERService2\\Modules\\ERService.Orders\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\19.2.0.44\\ToolboxNuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Radek\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.Contracts\\ERService.Contracts.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.DataAccess.EntityFramework.Abstractions\\ERService.DataAccess.EntityFramework.Abstractions.csproj"
+              },
+              "C:\\_projekty\\ERService2\\ERService.Mvvm\\ERService.Mvvm.csproj": {
+                "projectPath": "C:\\_projekty\\ERService2\\ERService.Mvvm\\ERService.Mvvm.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Prism.Core": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "Prism.Unity": {
+              "target": "Package",
+              "version": "[8.1.97, )"
+            },
+            "Syncfusion.SfGrid.WPF": {
+              "target": "Package",
+              "version": "[19.2.0.59, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
               "privateAssets": "none"
             }
           },

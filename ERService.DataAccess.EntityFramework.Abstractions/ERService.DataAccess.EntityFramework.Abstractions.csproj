@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ERService.DataAccess.EntityFramework.Entities\ERService.DataAccess.EntityFramework.Entities.csproj" />
+    <ProjectReference Include="..\ERService.FunctionalCSharp\ERService.FunctionalCSharp.csproj" />
   </ItemGroup>
 
 </Project>
